@@ -1,0 +1,13 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(250) NOT NULL,
+    email VARCHAR(250) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE url_mapping (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    original_url VARCHAR(255) NOT NULL,
+    short_url VARCHAR(10) NOT NULL,
+    user_id BIGINT UNSIGNED NOT NULL
+);
